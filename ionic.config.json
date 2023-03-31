@@ -1,0 +1,7 @@
+{
+  "name": "ionic-couch-template",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
