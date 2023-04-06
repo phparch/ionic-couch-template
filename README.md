@@ -26,3 +26,13 @@ Add to `polyfills.ts`:
 // For PouchDB - Add global to window, assigning the value of window itself.
 (window as any).global = window;
 ```
+
+Changes needed in `home.page.ts` to sync with CouchDB:
+```
+const COUCH_PASSWORD = "FIX_ME";
+const COUCH_REMOTE_URL = "FIX_ME";
+const COUCH_USERNAME = "FIX_ME";
+```
+
+### CouchDB CORS configuration might be needed to sync with PouchDB:
+- [CouchDB CORS Configuration](https://pouchdb.com/errors.html#no_access_control_allow_origin_header)
