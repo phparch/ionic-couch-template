@@ -41,13 +41,16 @@ export class HomePage {
 
   public async getAllDocumentsClick() {
     const allDocs = await this.getAllDocuments(this.localDB);
+    let allDocIDs;
 
     if (allDocs.length === 0) {
       this.textArea = 'No documents';
       return;
     }
 
-    this.textArea = allDocs.join('\n');
+    allDocIDs = allDocs.map(doc => doc._id);
+
+    this.textArea = allDocIDs.join('\n');
   }
 
   public getAllDocuments(database: PouchDB.Database): Promise<Array<any>> {
